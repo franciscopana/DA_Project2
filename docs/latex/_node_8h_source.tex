@@ -1,0 +1,61 @@
+\hypertarget{_node_8h_source}{}\doxysection{Node.\+h}
+\mbox{\hyperlink{_node_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#ifndef DA\_PROJECT2\_NODE\_H}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define DA\_PROJECT2\_NODE\_H}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_edge_8h}{Edge.h}}"{}}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 }
+\DoxyCodeLine{21 \textcolor{keyword}{class }\mbox{\hyperlink{class_node}{Node}} \{}
+\DoxyCodeLine{22 \textcolor{keyword}{public}:}
+\DoxyCodeLine{23     \textcolor{keywordtype}{int} queueIndex = 0;}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{32     \mbox{\hyperlink{class_node}{Node}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id});}
+\DoxyCodeLine{42     \mbox{\hyperlink{class_node}{Node}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}, \textcolor{keywordtype}{double} latitude, \textcolor{keywordtype}{double} longitude);}
+\DoxyCodeLine{50     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_node_a04d6761bf0ead66eb628a6ef5abc34e1}{getId}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{59     list<Edge*> \mbox{\hyperlink{class_node_aad60201495d0f0d361bb9dce7b446b94}{getEdges}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{68     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_node_af761aaef36a761a90c4f148a6add914d}{addEdge}}(\mbox{\hyperlink{class_edge}{Edge}}* edge);}
+\DoxyCodeLine{76     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_node_a97dd8f95e09a0516f8939627f94bd58e}{isVisited}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{84     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_node_a3f7d26b0d04878659f4ef852bf02173c}{setVisited}}(\textcolor{keywordtype}{bool} v);}
+\DoxyCodeLine{92     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_node_a6a76240688eddc8a2942618074e28c92}{getLatitude}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{100     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_node_ad4a79ebbcca46dae4638ffbe4d732399}{getLongitude}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{109     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_node_a12376170cc912e53d16243ba36cec2a1}{getDistanceTo}}(\mbox{\hyperlink{class_node}{Node}}* other) \textcolor{keyword}{const};}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111 }
+\DoxyCodeLine{119     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_node_a4fb6a0ff9f7838ee52df4f60a973a434}{setPath}}(\mbox{\hyperlink{class_edge}{Edge}}* p);}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{128     \mbox{\hyperlink{class_edge}{Edge}}* \mbox{\hyperlink{class_node_aa65cdeade5f183eea5b8642b9a37acbe}{getPath}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{137     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_node_aa7ce9ce9bfb3476389742f3ce4e050e0}{setDistance}}(\textcolor{keywordtype}{double} d);}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{146     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_node_aac8835a020aafb6196ce9f871a270272}{getDistance}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{156     \mbox{\hyperlink{class_edge}{Edge}}* \mbox{\hyperlink{class_node_a8827cc7d8be2a63b7a7960c98405c28b}{getEdgeTo}}(\mbox{\hyperlink{class_node}{Node}}* node) \textcolor{keyword}{const};}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{166     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_node_a2e631a4535bcdba655112aeedd078a99}{getHaversineDistanceTo}}(\mbox{\hyperlink{class_node}{Node}}* node) \textcolor{keyword}{const};}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{176     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_node_a53d6bc446575b5a6e472e347964d9b34}{operator<}}(\mbox{\hyperlink{class_node}{Node}}\& node) \textcolor{keyword}{const};}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{178 \textcolor{keyword}{private}:}
+\DoxyCodeLine{179     \textcolor{keywordtype}{int} id;}
+\DoxyCodeLine{180     \textcolor{keywordtype}{double} latitude;}
+\DoxyCodeLine{181     \textcolor{keywordtype}{double} longitude;}
+\DoxyCodeLine{182     \textcolor{keywordtype}{double} distance;}
+\DoxyCodeLine{183     list<Edge*> edges;}
+\DoxyCodeLine{184     \mbox{\hyperlink{class_edge}{Edge}}* path;}
+\DoxyCodeLine{185     \textcolor{keywordtype}{bool} visited;}
+\DoxyCodeLine{186 \};}
+\DoxyCodeLine{187 }
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DA\_PROJECT2\_NODE\_H}}
+
+\end{DoxyCode}

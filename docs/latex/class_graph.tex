@@ -1,0 +1,276 @@
+\hypertarget{class_graph}{}\doxysection{Graph Class Reference}
+\label{class_graph}\index{Graph@{Graph}}
+
+
+The \mbox{\hyperlink{class_graph}{Graph}} class represents a graph.  
+
+
+
+
+{\ttfamily \#include $<$Graph.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_graph_ae667aabc7dd2b367fe7e85137d34fe7d}{Graph}} (int index)
+\begin{DoxyCompactList}\small\item\em Constructor of the class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a0d11b0b054ac694670cc181182bd1a13}{load}} ()
+\begin{DoxyCompactList}\small\item\em Loads the graph by invoking appropriate functions based on the value of \textquotesingle{}index\textquotesingle{}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_graph_ab30b72c872269a6343cda95ec16029fc}{is\+Loaded}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the graph is loaded. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_graph_a94f577a0e433cce571ca1645cacd953b}{get\+Number\+Nodes}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of nodes based on the current graph index. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_graph_a738592ef34aeaa7484f7900bf1129fbc}{is\+RW}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the graph is a read-\/write (RW) graph. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_graph_a976b9c4998f7b287bcb5c47d61687679}{is\+Toy}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the graph is a toy graph. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_graph_acc9802a0cbcdd20b9b6da8f9cde91ea8}{is\+Extra}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the graph is an extra graph. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a4abb02831571ae1354d72bb91c83a18c}{backtracking\+\_\+aux}} (unsigned int cur\+Index, unsigned int count, double cost, double \&ans, vector$<$ unsigned int $>$ \&path, vector$<$ vector$<$ unsigned int $>$ $>$ paths)
+\begin{DoxyCompactList}\small\item\em Auxiliary function for backtracking to find the shortest path visiting all nodes starting from a given index. \end{DoxyCompactList}\item 
+pair$<$ double, vector$<$ unsigned int $>$ $>$ \mbox{\hyperlink{class_graph_af26041b3bd0e0c26621304694ddc62a4}{TSP\+\_\+\+Backtracking}} ()
+\begin{DoxyCompactList}\small\item\em Solves the Traveling Salesman Problem (TSP) using the backtracking algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a6931e78d7e74b005ccff2553f49c40e9}{prim\+\_\+generate\+\_\+\+MST}} ()
+\begin{DoxyCompactList}\small\item\em Generates the MST of the graph using Prim\textquotesingle{}s algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_afac48c4c876f2273b177faa3e63e10a3}{dfs\+MST}} (unsigned int cur\+Index, list$<$ unsigned int $>$ \&path)
+\begin{DoxyCompactList}\small\item\em Performs a Depth-\/\+First Search (DFS) starting from a given index in the Minimum Spanning Tree (MST). \end{DoxyCompactList}\item 
+pair$<$ double, list$<$ unsigned int $>$ $>$ \mbox{\hyperlink{class_graph_aa375e0098734a0b6b3dc41078a086e0b}{TSP\+\_\+\+Triangular\+Approximation}} ()
+\begin{DoxyCompactList}\small\item\em Solves the Traveling Salesman Problem (TSP) using the Triangular Approximation algorithm. \end{DoxyCompactList}\item 
+pair$<$ double, vector$<$ unsigned int $>$ $>$ \mbox{\hyperlink{class_graph_a4ad915fe8a47f4cbd68e4f1e92fd9f99}{TSP\+\_\+\+Cheapest\+Insertion}} ()
+\begin{DoxyCompactList}\small\item\em Solves the Traveling Salesman Problem (TSP) using the Cheapest Insertion algorithm. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_graph_ac364ddd54da7c0cbcda5622aeb1a5d42}{get\+Path\+Cost}} (list$<$ unsigned int $>$ path) const
+\begin{DoxyCompactList}\small\item\em Calculates the cost (distance) of a given path in the graph. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_graph_aaaf1da60a96ed9f93d2ebd61c744a781}{get\+Path\+Cost}} (vector$<$ unsigned int $>$ path) const
+\begin{DoxyCompactList}\small\item\em Calculates the cost (distance) of a given path in the graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_graph}{Graph}} class represents a graph. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_graph_ae667aabc7dd2b367fe7e85137d34fe7d}\label{class_graph_ae667aabc7dd2b367fe7e85137d34fe7d}} 
+\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{Graph()}{Graph()}}
+{\footnotesize\ttfamily Graph\+::\+Graph (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Constructor of the class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of the graph -\/ used to determine which graph to load\\
+\hline
+\end{DoxyParams}
+Time complexity\+: O(1) 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graph_a4abb02831571ae1354d72bb91c83a18c}\label{class_graph_a4abb02831571ae1354d72bb91c83a18c}} 
+\index{Graph@{Graph}!backtracking\_aux@{backtracking\_aux}}
+\index{backtracking\_aux@{backtracking\_aux}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{backtracking\_aux()}{backtracking\_aux()}}
+{\footnotesize\ttfamily void Graph\+::backtracking\+\_\+aux (\begin{DoxyParamCaption}\item[{unsigned int}]{cur\+Index,  }\item[{unsigned int}]{count,  }\item[{double}]{cost,  }\item[{double \&}]{ans,  }\item[{vector$<$ unsigned int $>$ \&}]{path,  }\item[{vector$<$ vector$<$ unsigned int $>$ $>$}]{paths }\end{DoxyParamCaption})}
+
+
+
+Auxiliary function for backtracking to find the shortest path visiting all nodes starting from a given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cur\+Index} & The current index (position) in the graph being explored. \\
+\hline
+{\em count} & The count of visited nodes in the current path. \\
+\hline
+{\em cost} & The accumulated cost (distance) of the current path. \\
+\hline
+{\em ans} & Reference to the variable storing the shortest path cost. \\
+\hline
+{\em path} & Reference to the vector storing the nodes of the shortest path. \\
+\hline
+{\em paths} & Vector of vectors storing the paths explored so far.\\
+\hline
+\end{DoxyParams}
+Time complexity\+: O((N-\/1)!), where N is the number of nodes \mbox{\Hypertarget{class_graph_afac48c4c876f2273b177faa3e63e10a3}\label{class_graph_afac48c4c876f2273b177faa3e63e10a3}} 
+\index{Graph@{Graph}!dfsMST@{dfsMST}}
+\index{dfsMST@{dfsMST}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{dfsMST()}{dfsMST()}}
+{\footnotesize\ttfamily void Graph\+::dfs\+MST (\begin{DoxyParamCaption}\item[{unsigned int}]{cur\+Index,  }\item[{list$<$ unsigned int $>$ \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Performs a Depth-\/\+First Search (DFS) starting from a given index in the Minimum Spanning Tree (MST). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cur\+Index} & The current index (position) in the MST being explored. \\
+\hline
+{\em path} & Reference to the list storing the indices of visited nodes in the order they are visited.\\
+\hline
+\end{DoxyParams}
+Time complexity\+: O(\+N), where N is the number of nodes in the MST \mbox{\Hypertarget{class_graph_a94f577a0e433cce571ca1645cacd953b}\label{class_graph_a94f577a0e433cce571ca1645cacd953b}} 
+\index{Graph@{Graph}!getNumberNodes@{getNumberNodes}}
+\index{getNumberNodes@{getNumberNodes}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getNumberNodes()}{getNumberNodes()}}
+{\footnotesize\ttfamily int Graph\+::get\+Number\+Nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the number of nodes based on the current graph index. 
+
+\begin{DoxyReturn}{Returns}
+The number of nodes in the graph based on the graph index.
+\end{DoxyReturn}
+Time complexity\+: O(1) \mbox{\Hypertarget{class_graph_ac364ddd54da7c0cbcda5622aeb1a5d42}\label{class_graph_ac364ddd54da7c0cbcda5622aeb1a5d42}} 
+\index{Graph@{Graph}!getPathCost@{getPathCost}}
+\index{getPathCost@{getPathCost}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getPathCost()}{getPathCost()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double Graph\+::get\+Path\+Cost (\begin{DoxyParamCaption}\item[{list$<$ unsigned int $>$}]{path }\end{DoxyParamCaption}) const}
+
+
+
+Calculates the cost (distance) of a given path in the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The list of node indices representing a path in the graph. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The cost (distance) of the path. Returns -\/1 if an invalid edge is encountered and the graph is not a read-\/write (RW) graph.
+\end{DoxyReturn}
+Time complexity\+: O(\+P) being P the size of the path \mbox{\Hypertarget{class_graph_aaaf1da60a96ed9f93d2ebd61c744a781}\label{class_graph_aaaf1da60a96ed9f93d2ebd61c744a781}} 
+\index{Graph@{Graph}!getPathCost@{getPathCost}}
+\index{getPathCost@{getPathCost}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getPathCost()}{getPathCost()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double Graph\+::get\+Path\+Cost (\begin{DoxyParamCaption}\item[{vector$<$ unsigned int $>$}]{path }\end{DoxyParamCaption}) const}
+
+
+
+Calculates the cost (distance) of a given path in the graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The vector of node indices representing a path in the graph. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The cost (distance) of the path. Returns -\/1 if an invalid edge is encountered and the graph is not a read-\/write (RW) graph.
+\end{DoxyReturn}
+Time complexity\+: O(\+P) being P the size of the path \mbox{\Hypertarget{class_graph_acc9802a0cbcdd20b9b6da8f9cde91ea8}\label{class_graph_acc9802a0cbcdd20b9b6da8f9cde91ea8}} 
+\index{Graph@{Graph}!isExtra@{isExtra}}
+\index{isExtra@{isExtra}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{isExtra()}{isExtra()}}
+{\footnotesize\ttfamily bool Graph\+::is\+Extra (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the graph is an extra graph. 
+
+\begin{DoxyReturn}{Returns}
+True if the graph is an extra graph, false otherwise.
+\end{DoxyReturn}
+Time complexity\+: O(1) \mbox{\Hypertarget{class_graph_ab30b72c872269a6343cda95ec16029fc}\label{class_graph_ab30b72c872269a6343cda95ec16029fc}} 
+\index{Graph@{Graph}!isLoaded@{isLoaded}}
+\index{isLoaded@{isLoaded}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{isLoaded()}{isLoaded()}}
+{\footnotesize\ttfamily bool Graph\+::is\+Loaded (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the graph is loaded. 
+
+\begin{DoxyReturn}{Returns}
+True if the graph is loaded (has edges), false otherwise.
+\end{DoxyReturn}
+Time complexity\+: O(1) \mbox{\Hypertarget{class_graph_a738592ef34aeaa7484f7900bf1129fbc}\label{class_graph_a738592ef34aeaa7484f7900bf1129fbc}} 
+\index{Graph@{Graph}!isRW@{isRW}}
+\index{isRW@{isRW}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{isRW()}{isRW()}}
+{\footnotesize\ttfamily bool Graph\+::is\+RW (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the graph is a read-\/write (RW) graph. 
+
+\begin{DoxyReturn}{Returns}
+True if the graph is a read-\/write (RW) graph, false otherwise.
+\end{DoxyReturn}
+Time complexity\+: O(1) \mbox{\Hypertarget{class_graph_a976b9c4998f7b287bcb5c47d61687679}\label{class_graph_a976b9c4998f7b287bcb5c47d61687679}} 
+\index{Graph@{Graph}!isToy@{isToy}}
+\index{isToy@{isToy}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{isToy()}{isToy()}}
+{\footnotesize\ttfamily bool Graph\+::is\+Toy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the graph is a toy graph. 
+
+\begin{DoxyReturn}{Returns}
+True if the graph is a toy graph, false otherwise.
+\end{DoxyReturn}
+Time complexity\+: O(1) \mbox{\Hypertarget{class_graph_a0d11b0b054ac694670cc181182bd1a13}\label{class_graph_a0d11b0b054ac694670cc181182bd1a13}} 
+\index{Graph@{Graph}!load@{load}}
+\index{load@{load}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void Graph\+::load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads the graph by invoking appropriate functions based on the value of \textquotesingle{}index\textquotesingle{}. 
+
+Time complexity\+: O(N + M), where N is the number of nodes and M is the number of edges \mbox{\Hypertarget{class_graph_a6931e78d7e74b005ccff2553f49c40e9}\label{class_graph_a6931e78d7e74b005ccff2553f49c40e9}} 
+\index{Graph@{Graph}!prim\_generate\_MST@{prim\_generate\_MST}}
+\index{prim\_generate\_MST@{prim\_generate\_MST}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{prim\_generate\_MST()}{prim\_generate\_MST()}}
+{\footnotesize\ttfamily void Graph\+::prim\+\_\+generate\+\_\+\+MST (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generates the MST of the graph using Prim\textquotesingle{}s algorithm. 
+
+Time complexity\+: O((V + E) log V), where V is the number of vertices and E is the number of edges \mbox{\Hypertarget{class_graph_af26041b3bd0e0c26621304694ddc62a4}\label{class_graph_af26041b3bd0e0c26621304694ddc62a4}} 
+\index{Graph@{Graph}!TSP\_Backtracking@{TSP\_Backtracking}}
+\index{TSP\_Backtracking@{TSP\_Backtracking}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{TSP\_Backtracking()}{TSP\_Backtracking()}}
+{\footnotesize\ttfamily pair$<$ double, vector$<$ unsigned int $>$ $>$ Graph\+::\+TSP\+\_\+\+Backtracking (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Solves the Traveling Salesman Problem (TSP) using the backtracking algorithm. 
+
+\begin{DoxyReturn}{Returns}
+A pair consisting of the shortest distance and the vector of node indices representing the shortest Hamiltonian cycle.
+\end{DoxyReturn}
+Time complexity\+: O((N-\/1)!), where N is the number of nodes \mbox{\Hypertarget{class_graph_a4ad915fe8a47f4cbd68e4f1e92fd9f99}\label{class_graph_a4ad915fe8a47f4cbd68e4f1e92fd9f99}} 
+\index{Graph@{Graph}!TSP\_CheapestInsertion@{TSP\_CheapestInsertion}}
+\index{TSP\_CheapestInsertion@{TSP\_CheapestInsertion}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{TSP\_CheapestInsertion()}{TSP\_CheapestInsertion()}}
+{\footnotesize\ttfamily pair$<$ double, vector$<$ unsigned int $>$ $>$ Graph\+::\+TSP\+\_\+\+Cheapest\+Insertion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Solves the Traveling Salesman Problem (TSP) using the Cheapest Insertion algorithm. 
+
+\begin{DoxyReturn}{Returns}
+A pair consisting of the cost of the tour and the vector of node indices representing the tour.
+\end{DoxyReturn}
+Time complexity\+: O(\+N$^\wedge$3), where N is the number of nodes in the graph \mbox{\Hypertarget{class_graph_aa375e0098734a0b6b3dc41078a086e0b}\label{class_graph_aa375e0098734a0b6b3dc41078a086e0b}} 
+\index{Graph@{Graph}!TSP\_TriangularApproximation@{TSP\_TriangularApproximation}}
+\index{TSP\_TriangularApproximation@{TSP\_TriangularApproximation}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{TSP\_TriangularApproximation()}{TSP\_TriangularApproximation()}}
+{\footnotesize\ttfamily pair$<$ double, list$<$ unsigned int $>$ $>$ Graph\+::\+TSP\+\_\+\+Triangular\+Approximation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Solves the Traveling Salesman Problem (TSP) using the Triangular Approximation algorithm. 
+
+\begin{DoxyReturn}{Returns}
+A pair consisting of the shortest distance and the list of node indices representing the shortest Hamiltonian cycle.
+\end{DoxyReturn}
+Time complexity\+: O((V + E) log V), where V is the number of vertices and E is the number of edges 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_graph_8h}{Graph.\+h}}\item 
+Graph.\+cpp\end{DoxyCompactItemize}
